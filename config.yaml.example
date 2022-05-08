@@ -1,0 +1,27 @@
+# Vacuum Configuration
+vacuum:
+  webhookStart: https://webhook/url/to/start/vacuum
+  webhookStop: https://webhook/url/to/stop/or/dock/vacuum
+  skipVerifySsl: false  # toggle skipping SSL verification
+
+# Query Configuration
+query:
+  lookbackDuration: 24h # period of time to look back to check for historical precipitation
+  lookforwardDuration: 1h # period of time to look for future precipitation
+  watchDuration: 30m # period of time to observe forecast during vacuum runtime
+  watchInterval: 5m # interval between data polls during watch period
+  
+# InfluxDB Configuration
+influxDB:
+  address: https://127.0.0.1:8086  # HTTP address for InfluxDB
+  username: myuser  # (optional) username for authenticating to InfluxDB v1
+  password: mypass  # (optional) password for authenticating to InfluxDB v1
+  measurement: weather_forecast  # sets the measurement containing the weather forecast data
+  field: precipitation_mm # sets the field name containing precipitation data (units are not important for this program's logic)
+  database: mydb  # (v1 only) database for use for InfluxDB v1
+  retentionPolicy: autogen  # (v1 only) retention policy for database
+  token: mytoken  # (v2 only) token for authenticating to InfluxDB; setting this assumes v2
+  organization: myorg  # (v2 only) sets the organization
+  bucket: mybucket  # (v2 only) sets the bucket
+  skipVerifySsl: false  # toggle skipping SSL verification
+
