@@ -8,8 +8,6 @@ vacuum:
 query:
   lookbackDuration: 24h # period of time to look back to check for historical precipitation
   lookforwardDuration: 1h # period of time to look for future precipitation
-  watchDuration: 30m # period of time to observe forecast during vacuum runtime
-  watchInterval: 5m # interval between data polls during watch period
   
 # InfluxDB Configuration
 influxDB:

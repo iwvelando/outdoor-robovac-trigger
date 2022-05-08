@@ -34,8 +34,6 @@ type Vacuum struct {
 type Query struct {
 	LookbackDuration    string
 	LookforwardDuration string
-	WatchDuration       string
-	WatchInterval       string
 }
 
 // InfluxDB holds the connection parameters for InfluxDB
